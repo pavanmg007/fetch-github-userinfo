@@ -2,13 +2,12 @@ import DetailCard from "./components/DetailCard";
 import SearchBar from "./components/SearchBar";
 import { useUserContext } from "./userContext";
 function App() {
-const{userData}=useUserContext()
+  const { userData } = useUserContext();
   return (
-      <div className="p-2">
+    <div className="p-2">
       <SearchBar />
-      {userData.name ? <DetailCard/> : null}
-      </div>
-
+      {userData.login ? <DetailCard /> : null}
+    </div>
   );
 }
 export default App;
